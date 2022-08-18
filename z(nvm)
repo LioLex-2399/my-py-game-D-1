@@ -1,0 +1,2 @@
+		image1 = pygame.image.load(s1)
+		gameDisplay.blit(image1, (40, 10))

@@ -2,10 +2,10 @@ import pygame
 from gameDisplay import(
 gameDisplay
 ) 
+from plyrmanager import plyrmanage
 from lvl import lvl1
-from skins2 import SkinGallery2
-
-
+from time import sleep
+import random
 plyrskin="plyrs/s1.png"
 s1="plyrs/s1.png"
 s2="plyrs/s2.png"
@@ -19,7 +19,8 @@ s9="plyrs/s9.png"
 clock = pygame.time.Clock()
 background_colour=255,255,255
 gameDisplay.fill(background_colour)
-def SkinGallery():
+def SkinGallery2(skin1):
+	skin1=skin1
 	plyskin=plyrskin
 	s1="plyrs/s1.png"
 	s2="plyrs/s2.png"
@@ -93,66 +94,43 @@ def SkinGallery():
 				if event.key == pygame.K_9 :
 					plyskin=s9
 				if event.key == pygame.K_RETURN:
-					SkinGallery2(plyskin)
-
-		
+					plyrmanage(skin1,plyskin)
 		
 		if plyskin == s1:
 			image = pygame.image.load(s1p)
 			gameDisplay.blit(image, (200, 300))
-
-			
 			
 		if plyskin == s2:
 			image = pygame.image.load(s2p)
 			gameDisplay.blit(image, (200, 300))
-
-			
 			
 		if plyskin == s3:
 			image = pygame.image.load(s3p)
 			gameDisplay.blit(image, (200, 300))
 
-			
-
 		if plyskin == s4:
 			image = pygame.image.load(s4p)
 			gameDisplay.blit(image, (200, 300))
-
-			
 		
 		if plyskin == s5:
 			image = pygame.image.load(s5p)
 			gameDisplay.blit(image, (200, 300))
-
-			
 			
 		if plyskin == s6:
 			image = pygame.image.load(s6p)
 			gameDisplay.blit(image, (200, 300))
-
-
 			
 		if plyskin == s7:
 			image = pygame.image.load(s7p)
 			gameDisplay.blit(image, (200, 300))
-
-			
 			
 		if plyskin == s8:
 			image = pygame.image.load(s8p)
 			gameDisplay.blit(image, (200, 300))
-
-
-			
 			
 		if plyskin == s9:
 			image = pygame.image.load(s9p)
 			gameDisplay.blit(image, (200, 300))
-
-
-
-			
 		##tips!##
 		pygame.draw.rect(gameDisplay, (100,100,205), (9,90,150,450),(2000))
 		font1 = pygame.font.Font('amatic-sc.bold.ttf', 32)
@@ -173,7 +151,7 @@ def SkinGallery():
 		gameDisplay.blit(img1, (12, 163))
 
 		font1 = pygame.font.Font('amatic-sc.bold.ttf', 22)
-		img1 = font1.render('- finished yet?', True, (2,240,0))
+		img1 = font1.render('- finished yet?   ', True, (2,240,0))
 		gameDisplay.blit(img1, (12, 183))
 
 		
