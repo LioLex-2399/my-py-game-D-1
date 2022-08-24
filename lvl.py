@@ -1,14 +1,15 @@
 import pygame,random
 from gameDisplay import gameDisplay
 clock = pygame.time.Clock()
-
-def lvl1(p1skin,p2skin):
+from winner import win
+pygame.init()
+def lvl1(p1skin,p2skin,att1,att2):
 	
 	
 	p1atckskin=""
 	bckgrd=4,156,255
-	enemyhlth=random.randint(100,300)
-	plyrhlth=random.randint(100,300)
+	enemyhlth=100
+	plyrhlth=100
 	p2bullet=False
 	p1countdown=0
 	p2countdown=2
@@ -21,8 +22,10 @@ def lvl1(p1skin,p2skin):
 	y2=10
 	x4=350
 	y4=10
+
 	while True:
-		gameDisplay.fill(bckgrd)
+		background_colour=0,200,55
+		gameDisplay.fill(background_colour)
 		#player
 		my_font = pygame.font.Font('amatic-sc.bold.ttf', 30)
 		text_surface = my_font.render('health: '+str(plyrhlth)+"%", True, (0, 0, 0))
@@ -46,8 +49,7 @@ def lvl1(p1skin,p2skin):
 		
 
 		if plyrhlth <= 0 or enemyhlth<=0:
-			pygame.quit()
-			quit()
+			win(plyrhlth,enemyhlth)
 			
 		for event in pygame.event.get():
 			
@@ -70,7 +72,7 @@ def lvl1(p1skin,p2skin):
 					x2+=20
 		if p1bullet:
 			y3-=10
-			image1 = pygame.image.load("bullet1.gif")
+			image1 = pygame.image.load(att1)
 			gameDisplay.blit(image1, (x3, y3))
 			print(y3)
 		if y3 == y2 and x3 == x2:
@@ -99,7 +101,7 @@ def lvl1(p1skin,p2skin):
 		
 		if p2bullet:
 			y4+=10
-			image1 = pygame.image.load("bullet2.gif")
+			image1 = pygame.image.load(att2)
 			gameDisplay.blit(image1, (x4, y4))
 		if y4 == y1 and x4 == x1:
 			plyrhlth-= 10

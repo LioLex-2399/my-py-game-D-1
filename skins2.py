@@ -138,26 +138,30 @@ def SkinGallery2(skin1):
 		gameDisplay.blit(img1, (12, 93))
 
 		font1 = pygame.font.Font('amatic-sc.bold.ttf', 22)
-		img1 = font1.render('-use the keys 1 to 9 ', True, (2,240,0))
+		img1 = font1.render('-this is the player 2 menu ', True, (2,240,0))
 		gameDisplay.blit(img1, (12, 123))
+
 		
+		font1 = pygame.font.Font('amatic-sc.bold.ttf', 22)
+		img1 = font1.render('-use the keys 1 to 9 ', True, (2,240,0))
+		gameDisplay.blit(img1, (12, 143))		
 
 		font1 = pygame.font.Font('amatic-sc.bold.ttf', 22)
 		img1 = font1.render('to navigate through ', True, (2,240,0))
-		gameDisplay.blit(img1, (12, 143))
-
-		font1 = pygame.font.Font('amatic-sc.bold.ttf', 22)
-		img1 = font1.render('skins', True, (2,240,0))
 		gameDisplay.blit(img1, (12, 163))
 
 		font1 = pygame.font.Font('amatic-sc.bold.ttf', 22)
-		img1 = font1.render('- finished yet?   ', True, (2,240,0))
+		img1 = font1.render('skins', True, (2,240,0))
 		gameDisplay.blit(img1, (12, 183))
+
+		font1 = pygame.font.Font('amatic-sc.bold.ttf', 22)
+		img1 = font1.render('- finished yet?   ', True, (2,240,0))
+		gameDisplay.blit(img1, (12, 203))
 
 		
 		font1 = pygame.font.Font('amatic-sc.bold.ttf', 22)
 		img1 = font1.render('press "Enter" if yes', True, (2,240,0))
-		gameDisplay.blit(img1, (12, 203))
+		gameDisplay.blit(img1, (12, 223))
 
 		
 		pygame.display.update()

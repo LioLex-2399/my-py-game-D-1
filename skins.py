@@ -3,7 +3,7 @@ from gameDisplay import(
 gameDisplay
 ) 
 from lvl import lvl1
-from skins2 import SkinGallery2
+from skins2 import SkinGallery2,plyrmanage
 
 
 plyrskin="plyrs/s1.png"
